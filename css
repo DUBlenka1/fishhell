@@ -1,0 +1,94 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 960px; /* Макс. ширина контента */
+    margin: 0 auto;
+    padding: 0 20px; /* Отступы от краев */
+}
+
+header {
+    background-color: #5b90b8;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header img {
+    max-width: 100px;
+    display: block; /* Чтобы изображение занимало всю ширину блока */
+    margin: 0 auto 10px auto;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #29516d;
+}
+
+.menu-section {
+    padding: 20px 0;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Адаптивная сетка */
+    grid-gap: 20px;
+}
+
+.menu-item {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.menu-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative; /* Избавляемся от fixed, если нужна обычная нижняя часть */
+    bottom: 0;
+    clear: both; /* чтобы не накладывался на контент */
+}
+
+/*  Добавим медиазапросы для адаптивности */
+@media (max-width: 600px) {
+    .menu-grid {
+        grid-template-columns: 1fr; /* Отображение по одному блюду на строку */
+    }
+}
